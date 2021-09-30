@@ -1,1 +1,0 @@
-# sample-go-quick-sort
