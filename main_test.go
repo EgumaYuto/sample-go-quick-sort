@@ -16,6 +16,13 @@ func TestQuickSort2(t *testing.T) {
 	assertEquals(target, []int{1, 2, 4}, t)
 }
 
+func TestQuickSort3(t *testing.T) {
+	target := []int{4, 2, 1, 3, 5, 6}
+	QuickSort(target)
+
+	assertEquals(target, []int{1, 2, 3, 4, 5, 6}, t)
+}
+
 func assertEquals(actual []int, expected []int, t *testing.T) {
 	lenAc := len(actual)
 	lenEx := len(expected)
