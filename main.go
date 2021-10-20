@@ -6,14 +6,17 @@ import (
 
 func main() {
 	target := []int{4, 2, 1, 1, 9, 8, 8}
-	size := 7
 
 	fmt.Println(target)
-	quickSort(target, 0, size)
+	quickSort(target)
 	fmt.Println(target)
 }
 
-func quickSort(target []int, low, high int) {
+func quickSort(target []int) {
+	doQuickSort(target, 0, len(target))
+}
+
+func doQuickSort(target []int, low, high int) {
 	if high-low <= 1 {
 		return
 	}
@@ -32,6 +35,6 @@ func quickSort(target []int, low, high int) {
 			target[i], target[right] = target[right], target[i]
 		}
 	}
-	quickSort(target, low, left)
-	quickSort(target, right, high)
+	doQuickSort(target, low, left)
+	doQuickSort(target, right, high)
 }
