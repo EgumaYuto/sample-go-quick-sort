@@ -8,11 +8,11 @@ func main() {
 	target := []int{4, 2, 1, 1, 9, 8, 8}
 
 	fmt.Println(target)
-	quickSort(target)
+	QuickSort(target)
 	fmt.Println(target)
 }
 
-func quickSort(target []int) {
+func QuickSort(target []int) {
 	doQuickSort(target, 0, len(target))
 }
 
